@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sales_config', function (Blueprint $table) {
+        Schema::create('sale_configs', function (Blueprint $table) {
             $table->id();
             $table->decimal('profit_margin', 2,2);
             $table->decimal('shipping_cost', 2,2);
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sales_config');
+        Schema::dropIfExists('sale_configs');
     }
 };

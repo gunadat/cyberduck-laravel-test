@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call([
+            SalesConfigSeeder::class
+        ]);
+
         User::factory()->create([
             'name' => 'Sales Agent',
             'email' => 'sales@coffee.shop',

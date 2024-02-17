@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class SaleConfig extends Model
 {
     use HasFactory;
+
+    protected string $tableName = 'sale_configs';
 }

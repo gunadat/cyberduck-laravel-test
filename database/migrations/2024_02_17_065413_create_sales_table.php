@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->integer('quantity');
+            $table->decimal('unit_cost', 2,2);
+            $table->decimal('selling_price',4,2);
+            $table->integer('created_by');
+            $table->dateTime('created_at')->useCurrent();
+            $table->dateTime('updated_at')->nullable()->useCurrentOnUpdate();
         });
     }
 
