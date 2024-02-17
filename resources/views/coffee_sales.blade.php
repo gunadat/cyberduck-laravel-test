@@ -17,6 +17,12 @@
                     <form method="POST" action="" id="salesForm">
                         <div class="row mb-2">
                             <div class="col-3 mb-3">
+                                <label for="product" class="form-label">Product</label>
+                                <select class="form-select" name="product" id="product">
+                                    <option value="">--Select--</option>
+                                </select>
+                            </div>
+                            <div class="col-3 mb-3">
                                 <label for="quantity" class="form-label">Quantity</label>
                                 <input type="number" name="quantity" class="form-control" id="quantity" placeholder="1">
                             </div>
@@ -61,6 +67,7 @@
                             <table class="table table-responsive table-bordered table-striped" id="salesReport">
                                 <thead>
                                 <tr>
+                                    <th>Product</th>
                                     <th>Quantity</th>
                                     <th>Unit Cost (&pound;)</th>
                                     <th>Selling Price</th>

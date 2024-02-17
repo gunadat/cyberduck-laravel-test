@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SalesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group([
     'middleware' => ['api', 'web'],
 ], function ($router) {
+    Route::get('/product-list', [ProductController::class, 'listProduct']);
+    Route::get('/product-config', [ProductController::class, 'getProductConfig']);
+
     Route::get('/list-sales-report', [SalesController::class, 'listSales']);
     Route::post('/save-sales', [SalesController::class, 'saveSale']);
 });

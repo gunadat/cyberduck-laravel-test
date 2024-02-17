@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed $unit_cost
  * @property mixed $selling_price
  * @property mixed $created_by
+ * @property mixed $product_id
+ * @property mixed $product_name
  */
 class Sale extends Model
 {

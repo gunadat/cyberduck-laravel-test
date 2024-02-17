@@ -43,10 +43,17 @@ class SalesController extends Controller
             $unitCost = sprintf("%.2f", $request->unit_cost);
 
             $saleService = new SalesService();
-            $sellingPrice = $saleService->calculateSellingPrice($quantity, $unitCost);
+            $sellingPrice = $saleService->calculateSellingPrice($quantity, $unitCost, $request->product_id);
             $sellingPrice = sprintf("%.2f", $sellingPrice);
 
-            $saleService->saveSaleRecord($quantity, $unitCost, $sellingPrice, $this->userId);
+            $saleDetail = (object)[
+                'productId' => $request->product_id,
+                'quantity' => $quantity,
+                'unitCost' => $unitCost,
+                'sellingPrice' => $sellingPrice,
+                'userId' => $this->userId
+            ];
+            $saleService->saveSaleRecord($saleDetail);
             return response()->json(['success' => true]);
         } catch (\Exception $e) {
             Log::error($e);
