@@ -22,20 +22,20 @@
                                     <option value="">--Select--</option>
                                 </select>
                             </div>
-                            <div class="col-3 mb-3">
+                            <div class="col-2 mb-2">
                                 <label for="quantity" class="form-label">Quantity</label>
                                 <input type="number" name="quantity" class="form-control" id="quantity" placeholder="1">
                             </div>
-                            <div class="col-3 mb-3">
+                            <div class="col-2 mb-2">
                                 <label for="unitCost" class="form-label">Unit Cost (&pound;)</label>
                                 <input type="number" name="unitCost" class="form-control" id="unitCost"
                                        placeholder="10">
                             </div>
-                            <div class="col-2 mb-3">
+                            <div class="col-2 mb-2">
                                 <label for="sellingPrice" class="form-label">Selling Price</label>
                                 <label class="form-control-plaintext" id="sellingPrice"></label>
                             </div>
-                            <div class="col-3 mb-3">
+                            <div class="col-2 mb-2">
                                 <button type="submit" class="btn btn-success btn-sm recordSale"
                                         style="margin-top: 33px;">
                                     Record Sale
